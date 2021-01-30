@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4113BA9C25C5E94700E904B6 /* SuchAndDungeonsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4113BA9B25C5E94700E904B6 /* SuchAndDungeonsApp.swift */; };
+		4113BA9E25C5E94700E904B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4113BA9D25C5E94700E904B6 /* ContentView.swift */; };
+		4113BAA025C5E94F00E904B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4113BA9F25C5E94F00E904B6 /* Assets.xcassets */; };
+		4113BAA325C5E94F00E904B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4113BAA225C5E94F00E904B6 /* Preview Assets.xcassets */; };
+		4113BAA525C5E94F00E904B6 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4113BAA425C5E94F00E904B6 /* Persistence.swift */; };
+		4113BAA825C5E94F00E904B6 /* SuchAndDungeons.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4113BAA625C5E94F00E904B6 /* SuchAndDungeons.xcdatamodeld */; };
+		4113BAB325C5E94F00E904B6 /* SuchAndDungeonsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4113BAB225C5E94F00E904B6 /* SuchAndDungeonsTests.swift */; };
+		4113BABE25C5E94F00E904B6 /* SuchAndDungeonsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4113BABD25C5E94F00E904B6 /* SuchAndDungeonsUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4113BAAF25C5E94F00E904B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4113BA9025C5E94700E904B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4113BA9725C5E94700E904B6;
+			remoteInfo = SuchAndDungeons;
+		};
+		4113BABA25C5E94F00E904B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4113BA9025C5E94700E904B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4113BA9725C5E94700E904B6;
+			remoteInfo = SuchAndDungeons;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4113BA9825C5E94700E904B6 /* SuchAndDungeons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuchAndDungeons.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4113BA9B25C5E94700E904B6 /* SuchAndDungeonsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuchAndDungeonsApp.swift; sourceTree = "<group>"; };
+		4113BA9D25C5E94700E904B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4113BA9F25C5E94F00E904B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4113BAA225C5E94F00E904B6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4113BAA425C5E94F00E904B6 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		4113BAA725C5E94F00E904B6 /* SuchAndDungeons.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SuchAndDungeons.xcdatamodel; sourceTree = "<group>"; };
+		4113BAA925C5E94F00E904B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4113BAAE25C5E94F00E904B6 /* SuchAndDungeonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuchAndDungeonsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4113BAB225C5E94F00E904B6 /* SuchAndDungeonsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuchAndDungeonsTests.swift; sourceTree = "<group>"; };
+		4113BAB425C5E94F00E904B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4113BAB925C5E94F00E904B6 /* SuchAndDungeonsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuchAndDungeonsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4113BABD25C5E94F00E904B6 /* SuchAndDungeonsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuchAndDungeonsUITests.swift; sourceTree = "<group>"; };
+		4113BABF25C5E94F00E904B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4113BA9525C5E94700E904B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4113BAAB25C5E94F00E904B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4113BAB625C5E94F00E904B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4113BA8F25C5E94700E904B6 = {
+			isa = PBXGroup;
+			children = (
+				4113BA9A25C5E94700E904B6 /* SuchAndDungeons */,
+				4113BAB125C5E94F00E904B6 /* SuchAndDungeonsTests */,
+				4113BABC25C5E94F00E904B6 /* SuchAndDungeonsUITests */,
+				4113BA9925C5E94700E904B6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4113BA9925C5E94700E904B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4113BA9825C5E94700E904B6 /* SuchAndDungeons.app */,
+				4113BAAE25C5E94F00E904B6 /* SuchAndDungeonsTests.xctest */,
+				4113BAB925C5E94F00E904B6 /* SuchAndDungeonsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4113BA9A25C5E94700E904B6 /* SuchAndDungeons */ = {
+			isa = PBXGroup;
+			children = (
+				4113BA9B25C5E94700E904B6 /* SuchAndDungeonsApp.swift */,
+				4113BA9D25C5E94700E904B6 /* ContentView.swift */,
+				4113BA9F25C5E94F00E904B6 /* Assets.xcassets */,
+				4113BAA425C5E94F00E904B6 /* Persistence.swift */,
+				4113BAA925C5E94F00E904B6 /* Info.plist */,
+				4113BAA625C5E94F00E904B6 /* SuchAndDungeons.xcdatamodeld */,
+				4113BAA125C5E94F00E904B6 /* Preview Content */,
+			);
+			path = SuchAndDungeons;
+			sourceTree = "<group>";
+		};
+		4113BAA125C5E94F00E904B6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4113BAA225C5E94F00E904B6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4113BAB125C5E94F00E904B6 /* SuchAndDungeonsTests */ = {
+			isa = PBXGroup;
+			children = (
+				4113BAB225C5E94F00E904B6 /* SuchAndDungeonsTests.swift */,
+				4113BAB425C5E94F00E904B6 /* Info.plist */,
+			);
+			path = SuchAndDungeonsTests;
+			sourceTree = "<group>";
+		};
+		4113BABC25C5E94F00E904B6 /* SuchAndDungeonsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4113BABD25C5E94F00E904B6 /* SuchAndDungeonsUITests.swift */,
+				4113BABF25C5E94F00E904B6 /* Info.plist */,
+			);
+			path = SuchAndDungeonsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4113BA9725C5E94700E904B6 /* SuchAndDungeons */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4113BAC225C5E94F00E904B6 /* Build configuration list for PBXNativeTarget "SuchAndDungeons" */;
+			buildPhases = (
+				4113BA9425C5E94700E904B6 /* Sources */,
+				4113BA9525C5E94700E904B6 /* Frameworks */,
+				4113BA9625C5E94700E904B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SuchAndDungeons;
+			productName = SuchAndDungeons;
+			productReference = 4113BA9825C5E94700E904B6 /* SuchAndDungeons.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4113BAAD25C5E94F00E904B6 /* SuchAndDungeonsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4113BAC525C5E94F00E904B6 /* Build configuration list for PBXNativeTarget "SuchAndDungeonsTests" */;
+			buildPhases = (
+				4113BAAA25C5E94F00E904B6 /* Sources */,
+				4113BAAB25C5E94F00E904B6 /* Frameworks */,
+				4113BAAC25C5E94F00E904B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4113BAB025C5E94F00E904B6 /* PBXTargetDependency */,
+			);
+			name = SuchAndDungeonsTests;
+			productName = SuchAndDungeonsTests;
+			productReference = 4113BAAE25C5E94F00E904B6 /* SuchAndDungeonsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4113BAB825C5E94F00E904B6 /* SuchAndDungeonsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4113BAC825C5E94F00E904B6 /* Build configuration list for PBXNativeTarget "SuchAndDungeonsUITests" */;
+			buildPhases = (
+				4113BAB525C5E94F00E904B6 /* Sources */,
+				4113BAB625C5E94F00E904B6 /* Frameworks */,
+				4113BAB725C5E94F00E904B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4113BABB25C5E94F00E904B6 /* PBXTargetDependency */,
+			);
+			name = SuchAndDungeonsUITests;
+			productName = SuchAndDungeonsUITests;
+			productReference = 4113BAB925C5E94F00E904B6 /* SuchAndDungeonsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4113BA9025C5E94700E904B6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					4113BA9725C5E94700E904B6 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					4113BAAD25C5E94F00E904B6 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 4113BA9725C5E94700E904B6;
+					};
+					4113BAB825C5E94F00E904B6 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 4113BA9725C5E94700E904B6;
+					};
+				};
+			};
+			buildConfigurationList = 4113BA9325C5E94700E904B6 /* Build configuration list for PBXProject "SuchAndDungeons" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4113BA8F25C5E94700E904B6;
+			productRefGroup = 4113BA9925C5E94700E904B6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4113BA9725C5E94700E904B6 /* SuchAndDungeons */,
+				4113BAAD25C5E94F00E904B6 /* SuchAndDungeonsTests */,
+				4113BAB825C5E94F00E904B6 /* SuchAndDungeonsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4113BA9625C5E94700E904B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4113BAA325C5E94F00E904B6 /* Preview Assets.xcassets in Resources */,
+				4113BAA025C5E94F00E904B6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4113BAAC25C5E94F00E904B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4113BAB725C5E94F00E904B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4113BA9425C5E94700E904B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4113BAA525C5E94F00E904B6 /* Persistence.swift in Sources */,
+				4113BAA825C5E94F00E904B6 /* SuchAndDungeons.xcdatamodeld in Sources */,
+				4113BA9E25C5E94700E904B6 /* ContentView.swift in Sources */,
+				4113BA9C25C5E94700E904B6 /* SuchAndDungeonsApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4113BAAA25C5E94F00E904B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4113BAB325C5E94F00E904B6 /* SuchAndDungeonsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4113BAB525C5E94F00E904B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4113BABE25C5E94F00E904B6 /* SuchAndDungeonsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4113BAB025C5E94F00E904B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4113BA9725C5E94700E904B6 /* SuchAndDungeons */;
+			targetProxy = 4113BAAF25C5E94F00E904B6 /* PBXContainerItemProxy */;
+		};
+		4113BABB25C5E94F00E904B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4113BA9725C5E94700E904B6 /* SuchAndDungeons */;
+			targetProxy = 4113BABA25C5E94F00E904B6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4113BAC025C5E94F00E904B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4113BAC125C5E94F00E904B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4113BAC325C5E94F00E904B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SuchAndDungeons/Preview Content\"";
+				DEVELOPMENT_TEAM = L5GKNB78UR;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = SuchAndDungeons/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.summitisland.lastboss;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4113BAC425C5E94F00E904B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SuchAndDungeons/Preview Content\"";
+				DEVELOPMENT_TEAM = L5GKNB78UR;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = SuchAndDungeons/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.summitisland.lastboss;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4113BAC625C5E94F00E904B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5GKNB78UR;
+				INFOPLIST_FILE = SuchAndDungeonsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.summitisland.SuchAndDungeonsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SuchAndDungeons.app/SuchAndDungeons";
+			};
+			name = Debug;
+		};
+		4113BAC725C5E94F00E904B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5GKNB78UR;
+				INFOPLIST_FILE = SuchAndDungeonsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.summitisland.SuchAndDungeonsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SuchAndDungeons.app/SuchAndDungeons";
+			};
+			name = Release;
+		};
+		4113BAC925C5E94F00E904B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5GKNB78UR;
+				INFOPLIST_FILE = SuchAndDungeonsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.summitisland.SuchAndDungeonsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SuchAndDungeons;
+			};
+			name = Debug;
+		};
+		4113BACA25C5E94F00E904B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5GKNB78UR;
+				INFOPLIST_FILE = SuchAndDungeonsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.summitisland.SuchAndDungeonsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SuchAndDungeons;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4113BA9325C5E94700E904B6 /* Build configuration list for PBXProject "SuchAndDungeons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4113BAC025C5E94F00E904B6 /* Debug */,
+				4113BAC125C5E94F00E904B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4113BAC225C5E94F00E904B6 /* Build configuration list for PBXNativeTarget "SuchAndDungeons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4113BAC325C5E94F00E904B6 /* Debug */,
+				4113BAC425C5E94F00E904B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4113BAC525C5E94F00E904B6 /* Build configuration list for PBXNativeTarget "SuchAndDungeonsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4113BAC625C5E94F00E904B6 /* Debug */,
+				4113BAC725C5E94F00E904B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4113BAC825C5E94F00E904B6 /* Build configuration list for PBXNativeTarget "SuchAndDungeonsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4113BAC925C5E94F00E904B6 /* Debug */,
+				4113BACA25C5E94F00E904B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4113BAA625C5E94F00E904B6 /* SuchAndDungeons.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4113BAA725C5E94F00E904B6 /* SuchAndDungeons.xcdatamodel */,
+			);
+			currentVersion = 4113BAA725C5E94F00E904B6 /* SuchAndDungeons.xcdatamodel */;
+			path = SuchAndDungeons.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4113BA9025C5E94700E904B6 /* Project object */;
+}
