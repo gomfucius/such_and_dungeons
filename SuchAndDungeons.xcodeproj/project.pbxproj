@@ -15,6 +15,10 @@
 		4113BAA825C5E94F00E904B6 /* SuchAndDungeons.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4113BAA625C5E94F00E904B6 /* SuchAndDungeons.xcdatamodeld */; };
 		4113BAB325C5E94F00E904B6 /* SuchAndDungeonsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4113BAB225C5E94F00E904B6 /* SuchAndDungeonsTests.swift */; };
 		4113BABE25C5E94F00E904B6 /* SuchAndDungeonsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4113BABD25C5E94F00E904B6 /* SuchAndDungeonsUITests.swift */; };
+		41BDFBC925CF97BA001D3219 /* MinionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDFBC825CF97BA001D3219 /* MinionView.swift */; };
+		41BDFBCE25CF97D6001D3219 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDFBCD25CF97D6001D3219 /* MainView.swift */; };
+		41BDFBD925CFA252001D3219 /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDFBD825CFA252001D3219 /* LevelView.swift */; };
+		41BDFBDE25D03821001D3219 /* EnemyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDFBDD25D03821001D3219 /* EnemyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		4113BAB925C5E94F00E904B6 /* SuchAndDungeonsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuchAndDungeonsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4113BABD25C5E94F00E904B6 /* SuchAndDungeonsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuchAndDungeonsUITests.swift; sourceTree = "<group>"; };
 		4113BABF25C5E94F00E904B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41BDFBC825CF97BA001D3219 /* MinionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinionView.swift; sourceTree = "<group>"; };
+		41BDFBCD25CF97D6001D3219 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		41BDFBD825CFA252001D3219 /* LevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
+		41BDFBDD25D03821001D3219 /* EnemyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +107,14 @@
 		4113BA9A25C5E94700E904B6 /* SuchAndDungeons */ = {
 			isa = PBXGroup;
 			children = (
-				4113BA9B25C5E94700E904B6 /* SuchAndDungeonsApp.swift */,
-				4113BA9D25C5E94700E904B6 /* ContentView.swift */,
 				4113BA9F25C5E94F00E904B6 /* Assets.xcassets */,
-				4113BAA425C5E94F00E904B6 /* Persistence.swift */,
+				4113BA9D25C5E94700E904B6 /* ContentView.swift */,
 				4113BAA925C5E94F00E904B6 /* Info.plist */,
-				4113BAA625C5E94F00E904B6 /* SuchAndDungeons.xcdatamodeld */,
+				4113BAA425C5E94F00E904B6 /* Persistence.swift */,
 				4113BAA125C5E94F00E904B6 /* Preview Content */,
+				4113BAA625C5E94F00E904B6 /* SuchAndDungeons.xcdatamodeld */,
+				4113BA9B25C5E94700E904B6 /* SuchAndDungeonsApp.swift */,
+				41BDFBC725CF978E001D3219 /* Views */,
 			);
 			path = SuchAndDungeons;
 			sourceTree = "<group>";
@@ -134,6 +143,17 @@
 				4113BABF25C5E94F00E904B6 /* Info.plist */,
 			);
 			path = SuchAndDungeonsUITests;
+			sourceTree = "<group>";
+		};
+		41BDFBC725CF978E001D3219 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				41BDFBDD25D03821001D3219 /* EnemyView.swift */,
+				41BDFBD825CFA252001D3219 /* LevelView.swift */,
+				41BDFBCD25CF97D6001D3219 /* MainView.swift */,
+				41BDFBC825CF97BA001D3219 /* MinionView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +285,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41BDFBD925CFA252001D3219 /* LevelView.swift in Sources */,
+				41BDFBCE25CF97D6001D3219 /* MainView.swift in Sources */,
+				41BDFBC925CF97BA001D3219 /* MinionView.swift in Sources */,
+				41BDFBDE25D03821001D3219 /* EnemyView.swift in Sources */,
 				4113BAA525C5E94F00E904B6 /* Persistence.swift in Sources */,
 				4113BAA825C5E94F00E904B6 /* SuchAndDungeons.xcdatamodeld in Sources */,
 				4113BA9E25C5E94700E904B6 /* ContentView.swift in Sources */,

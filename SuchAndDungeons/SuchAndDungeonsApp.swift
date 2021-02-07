@@ -13,8 +13,10 @@ struct SuchAndDungeonsApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            ZStack {
+                Color.black.edgesIgnoringSafeArea(.all)
+                MainView()
+            }
         }
     }
 }
