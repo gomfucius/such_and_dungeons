@@ -19,6 +19,8 @@
 		41BDFBCE25CF97D6001D3219 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDFBCD25CF97D6001D3219 /* MainView.swift */; };
 		41BDFBD925CFA252001D3219 /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDFBD825CFA252001D3219 /* LevelView.swift */; };
 		41BDFBDE25D03821001D3219 /* EnemyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDFBDD25D03821001D3219 /* EnemyView.swift */; };
+		41BDFBE725D255FF001D3219 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDFBE625D255FF001D3219 /* AppController.swift */; };
+		41BDFBEF25D2561A001D3219 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDFBEE25D2561A001D3219 /* GameController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		41BDFBCD25CF97D6001D3219 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		41BDFBD825CFA252001D3219 /* LevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
 		41BDFBDD25D03821001D3219 /* EnemyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyView.swift; sourceTree = "<group>"; };
+		41BDFBE625D255FF001D3219 /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
+		41BDFBEE25D2561A001D3219 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,7 @@
 				4113BA9F25C5E94F00E904B6 /* Assets.xcassets */,
 				4113BA9D25C5E94700E904B6 /* ContentView.swift */,
 				4113BAA925C5E94F00E904B6 /* Info.plist */,
+				41BDFBE525D255E4001D3219 /* Controllers */,
 				4113BAA425C5E94F00E904B6 /* Persistence.swift */,
 				4113BAA125C5E94F00E904B6 /* Preview Content */,
 				4113BAA625C5E94F00E904B6 /* SuchAndDungeons.xcdatamodeld */,
@@ -154,6 +159,15 @@
 				41BDFBC825CF97BA001D3219 /* MinionView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		41BDFBE525D255E4001D3219 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				41BDFBE625D255FF001D3219 /* AppController.swift */,
+				41BDFBEE25D2561A001D3219 /* GameController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +299,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41BDFBE725D255FF001D3219 /* AppController.swift in Sources */,
+				41BDFBEF25D2561A001D3219 /* GameController.swift in Sources */,
 				41BDFBD925CFA252001D3219 /* LevelView.swift in Sources */,
 				41BDFBCE25CF97D6001D3219 /* MainView.swift in Sources */,
 				41BDFBC925CF97BA001D3219 /* MinionView.swift in Sources */,

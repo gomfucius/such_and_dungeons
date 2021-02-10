@@ -10,14 +10,20 @@ import SwiftUI
 
 struct LevelView: View {
     
-    private var backgroundImage = Image("bg_dungeon001")
-    
+    @EnvironmentObject var app: AppController
+        
     var body: some View {
         ZStack {
-            backgroundImage
+            Image("bg_dungeon001")
                 .mask(Rectangle().frame(width: 320, height: 60))
-            EnemyView()
-            MinionView()
+            ForEach(Array(app.game.floors), id: \.key) { key, floor in
+                ForEach(floor.minions, id: \.self) { minion in
+                    MinionView()
+                }
+                ForEach(floor.enemies, id: \.self) { enemy in
+                    EnemyView()
+                }
+            }
         }
     }
 }
