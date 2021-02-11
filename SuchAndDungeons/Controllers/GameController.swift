@@ -27,6 +27,13 @@ class GameController: ObservableObject {
         floors[floorNumber]?.addEnemy()
     }
     
+    func removeMinion(with name: String) {
+        if let index = floors[0]?.minions.map({ $0.name }).firstIndex(of: name) {
+            floors[0]?.minions.remove(at: index)
+            app?.objectWillChange.send()
+        }
+    }
+    
 }
 
 class Floor {
@@ -35,7 +42,7 @@ class Floor {
     @Published var enemies = [Enemy]()
     
     func addMinion() {
-        minions.append(Minion(name: "\(Int.random(in: 0...1000))"))
+        minions.append(Minion(name: "\(Int.random(in: 0...1000000))"))
     }
     
     func addEnemy() {

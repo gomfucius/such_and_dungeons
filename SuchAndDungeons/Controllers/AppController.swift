@@ -11,9 +11,11 @@ import Foundation
 class AppController: ObservableObject {
     
     @Published var game = GameController()
-    
+    @Published var moveable = MovableController()
+
     init() {
         game.app = self
+        moveable.app = self
     }
         
 }

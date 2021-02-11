@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct MainView: View {
-    
+
     @EnvironmentObject var app: AppController
     
     var body: some View {
@@ -24,3 +24,4 @@ struct MainView: View {
         }
     }
 }
+

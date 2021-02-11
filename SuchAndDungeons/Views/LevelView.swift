@@ -18,10 +18,10 @@ struct LevelView: View {
                 .mask(Rectangle().frame(width: 320, height: 60))
             ForEach(Array(app.game.floors), id: \.key) { key, floor in
                 ForEach(floor.minions, id: \.self) { minion in
-                    MinionView()
+                    MinionView(name: minion.name)
                 }
                 ForEach(floor.enemies, id: \.self) { enemy in
-                    EnemyView()
+                    EnemyView(name: enemy.name)
                 }
             }
         }
