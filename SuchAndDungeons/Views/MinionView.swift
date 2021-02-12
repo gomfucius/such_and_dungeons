@@ -9,11 +9,18 @@ import Combine
 import Foundation
 import SwiftUI
 
+struct Variables {
+    
+    static var interval: TimeInterval = 1
+    static let hitThreshold: CGFloat = 50
+    
+}
+
 struct MinionView: View {
     
     @EnvironmentObject var app: AppController
     @StateObject var movableViewModel = MovableViewModel(direction: .right)
-    var name: String
+    var identity: Identity
     
     var body: some View {
         VStack {
@@ -22,15 +29,16 @@ struct MinionView: View {
                 .animation(.linear)
                 .onAppear {
                     movableViewModel.app = app
-                    movableViewModel.onAppear(name: name)
+                    movableViewModel.onAppear(identity: identity)
                 }
         }
     }
 }
 
 class MovableViewModel: ObservableObject, Equatable {
+    
     static func == (lhs: MovableViewModel, rhs: MovableViewModel) -> Bool {
-        lhs.name == rhs.name
+        lhs.identity?.id == rhs.identity?.id
     }
     
     enum Direction {
@@ -42,12 +50,12 @@ class MovableViewModel: ObservableObject, Equatable {
     var app: AppController?
     var xCancellable: AnyCancellable?
     var yCancellable: AnyCancellable?
-    var name: String?
+    var identity: Identity?
 
     init(direction: Direction) {
         self.direction = direction
         
-        xCancellable = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+        xCancellable = Timer.publish(every: Variables.interval, on: .main, in: .common).autoconnect()
             .sink { [weak self] _ in
                 self?.offset.x += self?.direction == .right ? 10 : -10
             }
@@ -62,8 +70,8 @@ class MovableViewModel: ObservableObject, Equatable {
             }
     }
     
-    func onAppear(name: String) {
-        self.name = name
+    func onAppear(identity: Identity) {
+        self.identity = identity
         switch direction {
         case .left:
             offset = CGPoint(x: 200, y: 0)
@@ -84,17 +92,17 @@ class MovableController {
     var cancellable: AnyCancellable?
     
     init() {
-        cancellable = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+        cancellable = Timer.publish(every: Variables.interval, on: .main, in: .common).autoconnect()
             .sink { [weak self] _ in
                 guard let self = self else { return }
                 
                 var minionsCopy = self.minions
                 for minion in self.minions {
                     for enemy in self.enemies {
-                        if minion.offset.x > enemy.offset.x {
+                        if minion.offset.x + Variables.hitThreshold > enemy.offset.x {
                             if let index = minionsCopy.firstIndex(of: minion) {
                                 minionsCopy.remove(at: index)
-                                self.app?.game.removeMinion(with: minion.name ?? "")
+                                self.app?.game.removeMinion(with: minion.identity?.id ?? "")
                                 break
                             }
                         }

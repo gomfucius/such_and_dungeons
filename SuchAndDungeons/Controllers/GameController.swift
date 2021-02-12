@@ -27,8 +27,8 @@ class GameController: ObservableObject {
         floors[floorNumber]?.addEnemy()
     }
     
-    func removeMinion(with name: String) {
-        if let index = floors[0]?.minions.map({ $0.name }).firstIndex(of: name) {
+    func removeMinion(with id: String) {
+        if let index = floors[0]?.minions.map({ $0.identity.id }).firstIndex(of: id) {
             floors[0]?.minions.remove(at: index)
             app?.objectWillChange.send()
         }
@@ -42,7 +42,7 @@ class Floor {
     @Published var enemies = [Enemy]()
     
     func addMinion() {
-        minions.append(Minion(name: "\(Int.random(in: 0...1000000))"))
+        minions.append(Minion())
     }
     
     func addEnemy() {
@@ -50,33 +50,35 @@ class Floor {
     }
 }
 
+struct Identity {
+    
+    var id: String
+    
+}
+
 class Minion: Identifiable, Hashable {
     
-    var name: String = ""
-    
-    init(name: String) {
-        self.name = name
-    }
+    var identity = Identity(id: "\(Int.random(in: 0...Int.max))")
     
     static func == (lhs: Minion, rhs: Minion) -> Bool {
-        return lhs.name == rhs.name
+        return lhs.id == rhs.id
     }
     
     func hash(into hasher: inout Hasher) {
-        hasher.combine(name)
+        hasher.combine(id)
     }
     
 }
 
 class Enemy: Identifiable, Hashable {
     
-    var name: String = ""
+    var identity = Identity(id: "\(Int.random(in: 0...Int.max))")
     
     static func == (lhs: Enemy, rhs: Enemy) -> Bool {
-        return lhs.name == rhs.name
+        return lhs.id == rhs.id
     }
     
     func hash(into hasher: inout Hasher) {
-        hasher.combine(name)
+        hasher.combine(id)
     }
 }
