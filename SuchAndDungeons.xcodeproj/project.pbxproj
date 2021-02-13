@@ -17,6 +17,9 @@
 		4113BABE25C5E94F00E904B6 /* SuchAndDungeonsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4113BABD25C5E94F00E904B6 /* SuchAndDungeonsUITests.swift */; };
 		4146F1CD25D8464B00AA4A8C /* MoveableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4146F1CC25D8464B00AA4A8C /* MoveableController.swift */; };
 		4146F1D225D8467A00AA4A8C /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4146F1D125D8467A00AA4A8C /* Variables.swift */; };
+		419654D825D86C610057A83C /* MonsterLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419654D725D86C610057A83C /* MonsterLibrary.swift */; };
+		419654DD25D86C850057A83C /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419654DC25D86C850057A83C /* Monster.swift */; };
+		419654E825D8764E0057A83C /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419654E725D8764E0057A83C /* Enums.swift */; };
 		41BDFBC925CF97BA001D3219 /* MinionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDFBC825CF97BA001D3219 /* MinionView.swift */; };
 		41BDFBCE25CF97D6001D3219 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDFBCD25CF97D6001D3219 /* MainView.swift */; };
 		41BDFBD925CFA252001D3219 /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDFBD825CFA252001D3219 /* LevelView.swift */; };
@@ -59,6 +62,9 @@
 		4113BABF25C5E94F00E904B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4146F1CC25D8464B00AA4A8C /* MoveableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveableController.swift; sourceTree = "<group>"; };
 		4146F1D125D8467A00AA4A8C /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
+		419654D725D86C610057A83C /* MonsterLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterLibrary.swift; sourceTree = "<group>"; };
+		419654DC25D86C850057A83C /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
+		419654E725D8764E0057A83C /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		41BDFBC825CF97BA001D3219 /* MinionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinionView.swift; sourceTree = "<group>"; };
 		41BDFBCD25CF97D6001D3219 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		41BDFBD825CFA252001D3219 /* LevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
@@ -158,7 +164,10 @@
 		4146F1D625D8468300AA4A8C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				419654DC25D86C850057A83C /* Monster.swift */,
+				419654D725D86C610057A83C /* MonsterLibrary.swift */,
 				4146F1D125D8467A00AA4A8C /* Variables.swift */,
+				419654E725D8764E0057A83C /* Enums.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -316,8 +325,11 @@
 				41BDFBE725D255FF001D3219 /* AppController.swift in Sources */,
 				41BDFBEF25D2561A001D3219 /* GameController.swift in Sources */,
 				41BDFBD925CFA252001D3219 /* LevelView.swift in Sources */,
+				419654D825D86C610057A83C /* MonsterLibrary.swift in Sources */,
 				4146F1D225D8467A00AA4A8C /* Variables.swift in Sources */,
 				41BDFBCE25CF97D6001D3219 /* MainView.swift in Sources */,
+				419654DD25D86C850057A83C /* Monster.swift in Sources */,
+				419654E825D8764E0057A83C /* Enums.swift in Sources */,
 				41BDFBC925CF97BA001D3219 /* MinionView.swift in Sources */,
 				4146F1CD25D8464B00AA4A8C /* MoveableController.swift in Sources */,
 				41BDFBDE25D03821001D3219 /* EnemyView.swift in Sources */,
