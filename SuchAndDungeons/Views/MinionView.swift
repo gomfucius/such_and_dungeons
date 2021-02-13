@@ -9,13 +9,6 @@ import Combine
 import Foundation
 import SwiftUI
 
-struct Variables {
-    
-    static var interval: TimeInterval = 1
-    static let hitThreshold: CGFloat = 50
-    
-}
-
 struct MinionView: View {
     
     @EnvironmentObject var app: AppController
@@ -36,10 +29,6 @@ struct MinionView: View {
 }
 
 class MovableViewModel: ObservableObject, Equatable {
-    
-    static func == (lhs: MovableViewModel, rhs: MovableViewModel) -> Bool {
-        lhs.identity?.id == rhs.identity?.id
-    }
     
     enum Direction {
         case left, right
@@ -81,34 +70,10 @@ class MovableViewModel: ObservableObject, Equatable {
             app?.moveable.minions.append(self)
         }
     }
-}
-
-class MovableController {
     
-    weak var app: AppController?
-    var minions = [MovableViewModel]()
-    var enemies = [MovableViewModel]()
+    // MARK: - Equatable
     
-    var cancellable: AnyCancellable?
-    
-    init() {
-        cancellable = Timer.publish(every: Variables.interval, on: .main, in: .common).autoconnect()
-            .sink { [weak self] _ in
-                guard let self = self else { return }
-                
-                var minionsCopy = self.minions
-                for minion in self.minions {
-                    for enemy in self.enemies {
-                        if minion.offset.x + Variables.hitThreshold > enemy.offset.x {
-                            if let index = minionsCopy.firstIndex(of: minion) {
-                                minionsCopy.remove(at: index)
-                                self.app?.game.removeMinion(with: minion.identity?.id ?? "")
-                                break
-                            }
-                        }
-                    }
-                }
-                self.minions = minionsCopy
-            }
+    static func == (lhs: MovableViewModel, rhs: MovableViewModel) -> Bool {
+        lhs.identity?.id == rhs.identity?.id
     }
 }
