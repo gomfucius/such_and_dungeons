@@ -27,7 +27,7 @@ class MovableController {
                         if minion.offset.x + Variables.hitThreshold > enemy.offset.x {
                             if let index = minionsCopy.firstIndex(of: minion) {
                                 minionsCopy.remove(at: index)
-                                self.app?.game.removeMinion(with: minion.identity?.id ?? "")
+                                self.app?.game.removeMinion(with: minion.identity?.id ?? "7")
                                 break
                             }
                         }

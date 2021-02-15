@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Monster {
+class Monster: NSCopying {
     
     private(set) var name: String
     private(set) var image: String
@@ -43,5 +43,41 @@ struct Monster {
     private(set) var dropPercentage: Int
     private(set) var sleepPercentage: Int
     private(set) var skills: [Skill]
+    
+    init(name: String, image: String, level: Int, hpMax: Int, mpMax: Int, hp: Int, mp: Int, attackPower: Int, armorClass: Int, strength: Int, stamina: Int, intelligence: Int, agility: Int, xp: Int, gold: Int, startFloor: Int, endFloor: Int, availability: Int, attribute: Attribute, width: CGFloat, height: CGFloat, offset: CGPoint, weak: [Element], strong: [Element], drop: String, dropPercentage: Int, sleepPercentage: Int, skills: [Skill]) {
+        self.name = name
+        self.image = image
+        self.level = level
+        self.hpMax = hpMax
+        self.mpMax = mpMax
+        self.hp = hp
+        self.mp = mp
+        self.attackPower = attackPower
+        self.armorClass = armorClass
+        self.strength = strength
+        self.stamina = stamina
+        self.intelligence = intelligence
+        self.agility = agility
+        self.xp = xp
+        self.gold = gold
+        self.startFloor = startFloor
+        self.endFloor = endFloor
+        self.availability = availability
+        self.attribute = attribute
+        self.width = width
+        self.height = height
+        self.offset = offset
+        self.weak = weak
+        self.strong = strong
+        self.drop = drop
+        self.dropPercentage = dropPercentage
+        self.sleepPercentage = sleepPercentage
+        self.skills = skills
+    }
+    
+    func copy(with zone: NSZone? = nil) -> Any {
+        let copy = Monster(name: name, image: image, level: level, hpMax: hpMax, mpMax: mpMax, hp: hp, mp: mp, attackPower: attackPower, armorClass: armorClass, strength: strength, stamina: stamina, intelligence: intelligence, agility: agility, xp: xp, gold: gold, startFloor: startFloor, endFloor: endFloor, availability: availability, attribute: attribute, width: width, height: height, offset: offset, weak: weak, strong: strong, drop: drop, dropPercentage: dropPercentage, sleepPercentage: sleepPercentage, skills: skills)
+        return copy
+    }
     
 }

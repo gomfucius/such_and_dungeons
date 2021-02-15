@@ -9,13 +9,19 @@ import UIKit
 
 class MonsterLibrary {
     
+    static let shared = MonsterLibrary()
+    
     var monsters = [Monster]()
     
     init() {
         populate()
     }
     
-    func populate() {
+    func monster(with name: String) -> Monster {
+        return monsters.filter({ $0.name == name }).first!.copy() as! Monster
+    }
+    
+    private func populate() {
         var monster: Monster
 
         monster = Monster(name: "Goo", image: "enemy_goo", level: 1, hpMax: 3, mpMax: 0, hp: 3, mp: 1, attackPower: 1, armorClass: 1, strength: 5, stamina: 6, intelligence: 4, agility: 5, xp: 1, gold: 0, startFloor: 1, endFloor: 9, availability: 100, attribute: .none, width: 32, height: 32, offset: CGPoint(x: 0, y: 0), weak: [.ice, .fire, .lightning], strong: [.none], drop: "Gooey Blob", dropPercentage: 20, sleepPercentage: 10, skills: [.attack, .attack, .rushcharge, .daydream])

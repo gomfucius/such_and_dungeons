@@ -19,7 +19,7 @@ class GameController: ObservableObject {
     }
     
     func addMinion(floorNumber: Int) {
-        floors[floorNumber]?.addMinion()
+        floors[floorNumber]?.addMinion(floorNumber: floorNumber)
         app?.objectWillChange.send()
     }
     

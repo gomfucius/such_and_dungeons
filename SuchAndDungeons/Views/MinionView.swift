@@ -13,16 +13,17 @@ struct MinionView: View {
     
     @EnvironmentObject var app: AppController
     @StateObject var movableViewModel = MovableViewModel(direction: .right)
-    var identity: Identity
+    var minion: Minion
     
     var body: some View {
         VStack {
-            Image("enemy_goo")
+            Image(movableViewModel.minion?.monster.image ?? "enemy_goo")
+                .scaleEffect(0.5)
                 .offset(x: movableViewModel.offset.x, y: movableViewModel.offset.y)
                 .animation(.linear)
                 .onAppear {
                     movableViewModel.app = app
-                    movableViewModel.onAppear(identity: identity)
+                    movableViewModel.onAppear(minion: minion)
                 }
         }
     }
@@ -39,6 +40,7 @@ class MovableViewModel: ObservableObject, Equatable {
     var app: AppController?
     var xCancellable: AnyCancellable?
     var yCancellable: AnyCancellable?
+    var minion: Minion?
     var identity: Identity?
 
     init(direction: Direction) {
@@ -59,8 +61,18 @@ class MovableViewModel: ObservableObject, Equatable {
             }
     }
     
+    func onAppear(minion: Minion) {
+        self.minion = minion
+        self.identity = minion.identity
+        doDirection()
+    }
+    
     func onAppear(identity: Identity) {
         self.identity = identity
+        doDirection()
+    }
+    
+    private func doDirection() {
         switch direction {
         case .left:
             offset = CGPoint(x: 200, y: 0)
@@ -74,6 +86,10 @@ class MovableViewModel: ObservableObject, Equatable {
     // MARK: - Equatable
     
     static func == (lhs: MovableViewModel, rhs: MovableViewModel) -> Bool {
-        lhs.identity?.id == rhs.identity?.id
+        if lhs.minion != nil {
+            return lhs.minion?.identity.id == rhs.minion?.identity.id
+        } else {
+            return lhs.identity?.id == rhs.identity?.id
+        }
     }
 }

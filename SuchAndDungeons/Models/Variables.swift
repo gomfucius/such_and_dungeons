@@ -10,36 +10,25 @@ import UIKit
 
 struct Variables {
     
-    static var interval: TimeInterval = 1
+    static var interval: TimeInterval = 0.5
     static let hitThreshold: CGFloat = 50
     
-}
-
-class Floor {
-    
-    @Published var minions = [Minion]()
-    @Published var enemies = [Enemy]()
-    
-    func addMinion() {
-        minions.append(Minion())
-    }
-    
-    func addEnemy() {
-        enemies.append(Enemy())
-    }
 }
 
 struct Identity {
     
     var id: String
-    var hp: Int = 10
-    var hpMax: Int = 10
     
 }
 
 class Minion: Identifiable, Hashable {
     
     var identity = Identity(id: "\(Int.random(in: 0...Int.max))")
+    let monster: Monster
+    
+    init(monster: Monster) {
+        self.monster = monster
+    }
     
     static func == (lhs: Minion, rhs: Minion) -> Bool {
         return lhs.id == rhs.id
