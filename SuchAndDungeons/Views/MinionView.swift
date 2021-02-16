@@ -17,7 +17,7 @@ struct MinionView: View {
     
     var body: some View {
         VStack {
-            Image(movableViewModel.minion?.monster.image ?? "enemy_goo")
+            Image(movableViewModel.minion?.image ?? "enemy_goo")
                 .scaleEffect(0.5)
                 .offset(x: movableViewModel.offset.x, y: movableViewModel.offset.y)
                 .animation(.linear)

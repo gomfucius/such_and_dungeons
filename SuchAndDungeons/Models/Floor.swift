@@ -14,7 +14,7 @@ class Floor {
     @Published var enemies = [Enemy]()
     
     func addMinion(floorNumber: Int) {
-        minions.append(Minion(monster: MonsterLibrary.shared.monster(with: "Maneater")))
+        minions.append(MinionLibrary.shared.minion(with: "Maneater"))
     }
     
     func addEnemy(floorNumber: Int) {

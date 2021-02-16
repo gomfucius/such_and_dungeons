@@ -27,9 +27,10 @@ class MovableController {
                     minion.state = .moving
                     for enemy in self.enemies {
                         enemy.state = .moving
+                        // If minion is close enough, go into battle
                         if minion.offset.x + Variables.hitThreshold > enemy.offset.x {
                             minion.battle(enemyMovableViewModel: enemy)
-                            if minion.minion?.monster.isDead == true {
+                            if minion.minion?.isDead == true {
                                 if let index = minionsCopy.firstIndex(of: minion) {
                                     minionsCopy.remove(at: index)
                                     self.app?.game.removeMinion(with: minion.minion?.identity.id ?? "7")
@@ -40,9 +41,10 @@ class MovableController {
                                 if let index = enemiesCopy.firstIndex(of: enemy) {
                                     enemiesCopy.remove(at: index)
                                     self.app?.game.removeEnemy(with: enemy.enemy?.identity.id ?? "7")
-                                    continue
                                 }
                             }
+                            // Exits for loop on enemies and go to next minion
+                            continue
                         }
                     }
                 }

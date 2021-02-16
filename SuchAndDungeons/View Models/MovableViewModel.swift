@@ -62,7 +62,7 @@ class MovableViewModel: ObservableObject, Equatable {
     func battle(enemyMovableViewModel: MovableViewModel) {
         self.state = .battling
         enemyMovableViewModel.state = .battling
-        guard let monster = minion?.monster, let enemy = enemyMovableViewModel.enemy else { return }
+        guard let monster = minion, let enemy = enemyMovableViewModel.enemy else { return }
         
         let damageToMe = calculateDamage(attacker: monster, target: enemy)
         monster.damage(damageToMe)
