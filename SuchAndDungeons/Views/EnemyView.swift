@@ -12,7 +12,7 @@ struct EnemyView: View {
     
     @EnvironmentObject var app: AppController
     @StateObject var movableViewModel = MovableViewModel(direction: .left)
-    var identity: Identity
+    var enemy: Enemy
 
     var body: some View {
         Image("enemy_choma")
@@ -20,7 +20,7 @@ struct EnemyView: View {
             .animation(.linear)
             .onAppear {
                 movableViewModel.app = app
-                movableViewModel.onAppear(identity: identity)
+                movableViewModel.onAppear(enemy: enemy)
             }
     }
 }

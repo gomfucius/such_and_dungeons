@@ -21,7 +21,7 @@ struct LevelView: View {
                     MinionView(minion: minion)
                 }
                 ForEach(floor.enemies, id: \.self) { enemy in
-                    EnemyView(identity: enemy.identity)
+                    EnemyView(enemy: enemy)
                 }
             }
         }

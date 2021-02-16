@@ -24,12 +24,20 @@ class GameController: ObservableObject {
     }
     
     func addEnemy(floorNumber: Int) {
-        floors[floorNumber]?.addEnemy()
+        floors[floorNumber]?.addEnemy(floorNumber: floorNumber)
+        app?.objectWillChange.send()
     }
     
     func removeMinion(with id: String) {
         if let index = floors[0]?.minions.map({ $0.identity.id }).firstIndex(of: id) {
             floors[0]?.minions.remove(at: index)
+            app?.objectWillChange.send()
+        }
+    }
+    
+    func removeEnemy(with id: String) {
+        if let index = floors[0]?.enemies.map({ $0.identity.id }).firstIndex(of: id) {
+            floors[0]?.enemies.remove(at: index)
             app?.objectWillChange.send()
         }
     }

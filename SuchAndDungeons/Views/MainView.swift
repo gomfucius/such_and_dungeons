@@ -21,6 +21,10 @@ struct MainView: View {
             Button("Add Minion") {
                 app.game.addMinion(floorNumber: 0)
             }
+            
+            Button("Add Enemy") {
+                app.game.addEnemy(floorNumber: 0)
+            }
         }
     }
 }

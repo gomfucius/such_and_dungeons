@@ -40,7 +40,7 @@ class Minion: Identifiable, Hashable {
     
 }
 
-class Enemy: Identifiable, Hashable {
+class Enemy: SuchUnit, Identifiable, Hashable, NSCopying {
     
     var identity = Identity(id: "\(Int.random(in: 0...Int.max))")
     
@@ -50,5 +50,10 @@ class Enemy: Identifiable, Hashable {
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
+    }
+    
+    func copy(with zone: NSZone? = nil) -> Any {
+        let copy = Enemy(name: name, image: image, level: level, hpMax: hpMax, mpMax: mpMax, hp: hp, mp: mp, attackPower: attackPower, armorClass: armorClass, strength: strength, stamina: stamina, intelligence: intelligence, agility: agility, xp: xp, gold: gold, startFloor: startFloor, endFloor: endFloor, availability: availability, attribute: attribute, width: width, height: height, offset: offset, weak: weak, strong: strong, drop: drop, dropPercentage: dropPercentage, sleepPercentage: sleepPercentage, skills: skills)
+        return copy
     }
 }

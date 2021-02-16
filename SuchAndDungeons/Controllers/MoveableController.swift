@@ -22,18 +22,32 @@ class MovableController {
                 guard let self = self else { return }
                 
                 var minionsCopy = self.minions
+                var enemiesCopy = self.enemies
                 for minion in self.minions {
+                    minion.state = .moving
                     for enemy in self.enemies {
+                        enemy.state = .moving
                         if minion.offset.x + Variables.hitThreshold > enemy.offset.x {
-                            if let index = minionsCopy.firstIndex(of: minion) {
-                                minionsCopy.remove(at: index)
-                                self.app?.game.removeMinion(with: minion.identity?.id ?? "7")
-                                break
+                            minion.battle(enemyMovableViewModel: enemy)
+                            if minion.minion?.monster.isDead == true {
+                                if let index = minionsCopy.firstIndex(of: minion) {
+                                    minionsCopy.remove(at: index)
+                                    self.app?.game.removeMinion(with: minion.minion?.identity.id ?? "7")
+                                }
+                            }
+                            
+                            if enemy.enemy?.isDead == true {
+                                if let index = enemiesCopy.firstIndex(of: enemy) {
+                                    enemiesCopy.remove(at: index)
+                                    self.app?.game.removeEnemy(with: enemy.enemy?.identity.id ?? "7")
+                                    continue
+                                }
                             }
                         }
                     }
                 }
                 self.minions = minionsCopy
+                self.enemies = enemiesCopy
             }
     }
 }
