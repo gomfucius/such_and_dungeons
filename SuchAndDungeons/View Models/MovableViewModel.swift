@@ -25,6 +25,7 @@ class MovableViewModel: ObservableObject, Equatable {
     var app: AppController?
     var xCancellable: AnyCancellable?
     var yCancellable: AnyCancellable?
+    var notificationCancellable: AnyCancellable?
     var minion: Minion?
     var enemy: Enemy?
     var state: State = .moving
@@ -32,6 +33,17 @@ class MovableViewModel: ObservableObject, Equatable {
     init(direction: Direction) {
         self.direction = direction
         
+        start()
+        notificationCancellable = NotificationCenter.default
+            .publisher(for: Notification.intervalDidChange)
+            .sink { _ in
+                self.xCancellable?.cancel()
+                self.yCancellable?.cancel()
+                self.start()
+            }
+    }
+    
+    func start() {
         xCancellable = Timer.publish(every: Variables.interval, on: .main, in: .common).autoconnect()
             .sink { [weak self] _ in
                 if self?.state == .moving {

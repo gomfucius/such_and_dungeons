@@ -10,8 +10,13 @@ import UIKit
 
 struct Variables {
     
-    static var interval: TimeInterval = 0.5
+    static private(set) var interval: TimeInterval = 0.5
     static let hitThreshold: CGFloat = 50
+    
+    static func updateInterval() {
+        Self.interval = Variables.interval == 1 ? 0.5 : 1
+        NotificationCenter.default.post(name: Notification.intervalDidChange, object: nil)
+    }
     
 }
 

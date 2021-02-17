@@ -25,6 +25,10 @@ struct MainView: View {
             Button("Add Enemy") {
                 app.game.addEnemy(floorNumber: 0)
             }
+            
+            Button("Change Speed") {
+                Variables.updateInterval()
+            }
         }
     }
 }

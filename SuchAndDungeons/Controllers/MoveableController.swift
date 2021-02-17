@@ -15,8 +15,19 @@ class MovableController {
     var enemies = [MovableViewModel]()
     
     var cancellable: AnyCancellable?
-    
+    var notificationCancellable: AnyCancellable?
+
     init() {
+        start()
+        notificationCancellable = NotificationCenter.default
+            .publisher(for: Notification.intervalDidChange)
+            .sink { _ in
+                self.cancellable?.cancel()
+                self.start()
+            }
+    }
+    
+    func start() {
         cancellable = Timer.publish(every: Variables.interval, on: .main, in: .common).autoconnect()
             .sink { [weak self] _ in
                 guard let self = self else { return }
@@ -26,7 +37,6 @@ class MovableController {
                 for minion in self.minions {
                     minion.state = .moving
                     for enemy in self.enemies {
-                        enemy.state = .moving
                         // If minion is close enough, go into battle
                         if minion.offset.x + Variables.hitThreshold > enemy.offset.x {
                             minion.battle(enemyMovableViewModel: enemy)
@@ -45,6 +55,8 @@ class MovableController {
                             }
                             // Exits for loop on enemies and go to next minion
                             continue
+                        } else {
+                            enemy.state = .moving
                         }
                     }
                 }

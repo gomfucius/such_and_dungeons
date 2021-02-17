@@ -11,6 +11,7 @@
 		410ACEFE25DC3D7E00D315F2 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410ACEFD25DC3D7E00D315F2 /* Monster.swift */; };
 		410ACF0325DC3D9900D315F2 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410ACF0225DC3D9900D315F2 /* Enemy.swift */; };
 		410ACF0B25DC3E2000D315F2 /* EnemyLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410ACF0A25DC3E2000D315F2 /* EnemyLibrary.swift */; };
+		410ACF1425DC9F1100D315F2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410ACF1325DC9F1100D315F2 /* Extensions.swift */; };
 		4113BA9C25C5E94700E904B6 /* SuchAndDungeonsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4113BA9B25C5E94700E904B6 /* SuchAndDungeonsApp.swift */; };
 		4113BA9E25C5E94700E904B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4113BA9D25C5E94700E904B6 /* ContentView.swift */; };
 		4113BAA025C5E94F00E904B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4113BA9F25C5E94F00E904B6 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		410ACEFD25DC3D7E00D315F2 /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 		410ACF0225DC3D9900D315F2 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 		410ACF0A25DC3E2000D315F2 /* EnemyLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyLibrary.swift; sourceTree = "<group>"; };
+		410ACF1325DC9F1100D315F2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4113BA9825C5E94700E904B6 /* SuchAndDungeons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuchAndDungeons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4113BA9B25C5E94700E904B6 /* SuchAndDungeonsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuchAndDungeonsApp.swift; sourceTree = "<group>"; };
 		4113BA9D25C5E94700E904B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -116,6 +118,14 @@
 			path = "View Models";
 			sourceTree = "<group>";
 		};
+		410ACF1225DC9F0500D315F2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				410ACF1325DC9F1100D315F2 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4113BA8F25C5E94700E904B6 = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +152,7 @@
 				4113BA9F25C5E94F00E904B6 /* Assets.xcassets */,
 				4113BA9D25C5E94700E904B6 /* ContentView.swift */,
 				41BDFBE525D255E4001D3219 /* Controllers */,
+				410ACF1225DC9F0500D315F2 /* Extensions */,
 				4113BAA925C5E94F00E904B6 /* Info.plist */,
 				4146F1D625D8468300AA4A8C /* Models */,
 				4113BAA425C5E94F00E904B6 /* Persistence.swift */,
@@ -358,6 +369,7 @@
 				410ACF0325DC3D9900D315F2 /* Enemy.swift in Sources */,
 				419654ED25D876E00057A83C /* Floor.swift in Sources */,
 				410ACEFE25DC3D7E00D315F2 /* Monster.swift in Sources */,
+				410ACF1425DC9F1100D315F2 /* Extensions.swift in Sources */,
 				41BDFBC925CF97BA001D3219 /* MinionView.swift in Sources */,
 				4146F1CD25D8464B00AA4A8C /* MoveableController.swift in Sources */,
 				41BDFBDE25D03821001D3219 /* EnemyView.swift in Sources */,
