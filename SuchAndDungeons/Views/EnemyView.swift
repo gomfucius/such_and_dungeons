@@ -15,7 +15,8 @@ struct EnemyView: View {
     var enemy: Enemy
 
     var body: some View {
-        Image("enemy_choma")
+        Text("🧙‍♂️")
+            .font(.title)
             .offset(x: movableViewModel.offset.x, y: movableViewModel.offset.y)
             .animation(.linear)
             .onAppear {

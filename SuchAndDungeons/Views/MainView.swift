@@ -14,6 +14,7 @@ struct MainView: View {
     
     var body: some View {
         VStack {
+            HeaderView()
             ForEach(Array(app.game.floors), id: \.key) { key, value in
                 LevelView().frame(width: 320, height: 60)
             }
@@ -29,7 +30,22 @@ struct MainView: View {
             Button("Change Speed") {
                 Variables.updateInterval()
             }
+            Spacer()
         }
     }
 }
 
+struct HeaderView: View {
+
+    @EnvironmentObject var app: AppController
+
+    var body: some View {
+        HStack {
+            Text("1F-5F")
+            Spacer()
+            Text("💰 \(app.player.gold)")
+        }
+        .foregroundColor(.white)
+        .padding()
+    }
+}

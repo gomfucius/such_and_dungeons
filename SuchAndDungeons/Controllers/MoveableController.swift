@@ -60,6 +60,11 @@ class MovableController {
                         }
                     }
                 }
+                if self.minions.count == 0 {
+                    for enemy in self.enemies {
+                        enemy.state = .moving
+                    }
+                }
                 self.minions = minionsCopy
                 self.enemies = enemiesCopy
             }

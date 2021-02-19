@@ -76,9 +76,9 @@ class MovableViewModel: ObservableObject, Equatable {
         enemyMovableViewModel.state = .battling
         guard let monster = minion, let enemy = enemyMovableViewModel.enemy else { return }
         
-        let damageToMe = calculateDamage(attacker: monster, target: enemy)
+        let damageToMe = calculateDamage(attacker: enemy, target: monster)
         monster.damage(damageToMe)
-        let damageToThem = calculateDamage(attacker: enemy, target: monster)
+        let damageToThem = calculateDamage(attacker: monster, target: enemy)
         enemy.damage(damageToThem)
     }
     

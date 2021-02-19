@@ -12,6 +12,7 @@
 		410ACF0325DC3D9900D315F2 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410ACF0225DC3D9900D315F2 /* Enemy.swift */; };
 		410ACF0B25DC3E2000D315F2 /* EnemyLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410ACF0A25DC3E2000D315F2 /* EnemyLibrary.swift */; };
 		410ACF1425DC9F1100D315F2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410ACF1325DC9F1100D315F2 /* Extensions.swift */; };
+		410ACF1F25DCA06900D315F2 /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410ACF1E25DCA06900D315F2 /* PlayerController.swift */; };
 		4113BA9C25C5E94700E904B6 /* SuchAndDungeonsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4113BA9B25C5E94700E904B6 /* SuchAndDungeonsApp.swift */; };
 		4113BA9E25C5E94700E904B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4113BA9D25C5E94700E904B6 /* ContentView.swift */; };
 		4113BAA025C5E94F00E904B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4113BA9F25C5E94F00E904B6 /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		410ACF0225DC3D9900D315F2 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 		410ACF0A25DC3E2000D315F2 /* EnemyLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyLibrary.swift; sourceTree = "<group>"; };
 		410ACF1325DC9F1100D315F2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		410ACF1E25DCA06900D315F2 /* PlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
 		4113BA9825C5E94700E904B6 /* SuchAndDungeons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuchAndDungeons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4113BA9B25C5E94700E904B6 /* SuchAndDungeonsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuchAndDungeonsApp.swift; sourceTree = "<group>"; };
 		4113BA9D25C5E94700E904B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				41BDFBE625D255FF001D3219 /* AppController.swift */,
 				41BDFBEE25D2561A001D3219 /* GameController.swift */,
 				4146F1CC25D8464B00AA4A8C /* MoveableController.swift */,
+				410ACF1E25DCA06900D315F2 /* PlayerController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				4113BAA525C5E94F00E904B6 /* Persistence.swift in Sources */,
 				4113BAA825C5E94F00E904B6 /* SuchAndDungeons.xcdatamodeld in Sources */,
 				4113BA9E25C5E94700E904B6 /* ContentView.swift in Sources */,
+				410ACF1F25DCA06900D315F2 /* PlayerController.swift in Sources */,
 				4113BA9C25C5E94700E904B6 /* SuchAndDungeonsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

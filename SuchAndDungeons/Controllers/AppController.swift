@@ -12,6 +12,7 @@ class AppController: ObservableObject {
     
     @Published var game = GameController()
     @Published var moveable = MovableController()
+    @Published var player = PlayerController()
 
     init() {
         game.app = self
