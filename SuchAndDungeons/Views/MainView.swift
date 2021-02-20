@@ -31,6 +31,7 @@ struct MainView: View {
                 Variables.updateInterval()
             }
             Spacer()
+            MenuView()
         }
     }
 }
@@ -47,5 +48,54 @@ struct HeaderView: View {
         }
         .foregroundColor(.white)
         .padding()
+    }
+}
+
+struct MenuView: View {
+    
+    @EnvironmentObject var app: AppController
+    
+    enum MenuType {
+        case minions, items
+    }
+    
+    @State private var isShowingModal = false
+    @State private var menuType: MenuType = .minions
+
+    var body: some View {
+        HStack {
+            MenuItem(title: "Minions")
+                .onTapGesture {
+                    menuType = .minions
+                    isShowingModal = true
+                    app.moveable.pause()
+                }
+            MenuItem(title: "Items")
+                .onTapGesture {
+                    menuType = .items
+                    isShowingModal = true
+                    app.moveable.pause()
+                }
+        }
+        .sheet(isPresented: $isShowingModal, onDismiss: { app.moveable.unpause() }) {
+            if menuType == .minions {
+                Text("Minions")
+            } else {
+                Text("Items")
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: 44)
+    }
+}
+
+struct MenuItem: View {
+    
+    var title: String
+    
+    var body: some View {
+        ZStack {
+            Rectangle().foregroundColor(.gray)
+            Text(title)
+        }
     }
 }

@@ -43,6 +43,11 @@ class MovableViewModel: ObservableObject, Equatable {
             }
     }
     
+    func pause() {
+        xCancellable?.cancel()
+        yCancellable?.cancel()
+    }
+    
     func start() {
         xCancellable = Timer.publish(every: Variables.interval, on: .main, in: .common).autoconnect()
             .sink { [weak self] _ in

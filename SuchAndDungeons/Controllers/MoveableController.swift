@@ -27,6 +27,18 @@ class MovableController {
             }
     }
     
+    func pause() {
+        cancellable?.cancel()
+        minions.forEach { $0.pause() }
+        enemies.forEach { $0.pause() }
+    }
+    
+    func unpause() {
+        start()
+        minions.forEach { $0.start() }
+        enemies.forEach { $0.start() }
+    }
+    
     func start() {
         cancellable = Timer.publish(every: Variables.interval, on: .main, in: .common).autoconnect()
             .sink { [weak self] _ in
