@@ -33,6 +33,7 @@
 		41BDFBDE25D03821001D3219 /* EnemyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDFBDD25D03821001D3219 /* EnemyView.swift */; };
 		41BDFBE725D255FF001D3219 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDFBE625D255FF001D3219 /* AppController.swift */; };
 		41BDFBEF25D2561A001D3219 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDFBEE25D2561A001D3219 /* GameController.swift */; };
+		41FD05F525E1AA1C00D4A928 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FD05F425E1AA1C00D4A928 /* MenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		41BDFBDD25D03821001D3219 /* EnemyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyView.swift; sourceTree = "<group>"; };
 		41BDFBE625D255FF001D3219 /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		41BDFBEE25D2561A001D3219 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		41FD05F425E1AA1C00D4A928 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 				41BDFBDD25D03821001D3219 /* EnemyView.swift */,
 				41BDFBD825CFA252001D3219 /* LevelView.swift */,
 				41BDFBCD25CF97D6001D3219 /* MainView.swift */,
+				41FD05F425E1AA1C00D4A928 /* MenuView.swift */,
 				41BDFBC825CF97BA001D3219 /* MinionView.swift */,
 			);
 			path = Views;
@@ -359,6 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41FD05F525E1AA1C00D4A928 /* MenuView.swift in Sources */,
 				41BDFBE725D255FF001D3219 /* AppController.swift in Sources */,
 				41BDFBEF25D2561A001D3219 /* GameController.swift in Sources */,
 				41BDFBD925CFA252001D3219 /* LevelView.swift in Sources */,

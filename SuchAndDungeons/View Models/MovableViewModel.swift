@@ -51,8 +51,27 @@ class MovableViewModel: ObservableObject, Equatable {
     func start() {
         xCancellable = Timer.publish(every: Variables.interval, on: .main, in: .common).autoconnect()
             .sink { [weak self] _ in
-                if self?.state == .moving {
-                    self?.offset.x += self?.direction == .right ? 10 : -10
+                guard let self = self else { return }
+                if self.state == .moving {
+                    self.offset.x += self.direction == .right ? 10 : -10
+                    if self.direction == .left {
+                        if self.offset.x < CGFloat(-200) {
+                            self.app?.player.addHP(-1)
+                            self.xCancellable?.cancel()
+                            self.yCancellable?.cancel()
+                            self.app?.moveable.removeEnemy(self)
+                            self.app?.objectWillChange.send()
+                        }
+                    }
+                    
+                    if self.direction == .right {
+                        if self.offset.x > CGFloat(200) {
+                            self.xCancellable?.cancel()
+                            self.yCancellable?.cancel()
+                            self.app?.moveable.removeMinion(self)
+                            self.app?.objectWillChange.send()
+                        }
+                    }
                 }
             }
         

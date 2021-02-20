@@ -43,6 +43,7 @@ struct HeaderView: View {
     var body: some View {
         HStack {
             Text("1F-5F")
+            HeartView()
             Spacer()
             Text("💰 \(app.player.gold)")
         }
@@ -51,51 +52,23 @@ struct HeaderView: View {
     }
 }
 
-struct MenuView: View {
+struct HeartView: View {
     
     @EnvironmentObject var app: AppController
-    
-    enum MenuType {
-        case minions, items
-    }
-    
-    @State private var isShowingModal = false
-    @State private var menuType: MenuType = .minions
 
     var body: some View {
-        HStack {
-            MenuItem(title: "Minions")
-                .onTapGesture {
-                    menuType = .minions
-                    isShowingModal = true
-                    app.moveable.pause()
-                }
-            MenuItem(title: "Items")
-                .onTapGesture {
-                    menuType = .items
-                    isShowingModal = true
-                    app.moveable.pause()
-                }
-        }
-        .sheet(isPresented: $isShowingModal, onDismiss: { app.moveable.unpause() }) {
-            if menuType == .minions {
-                Text("Minions")
+        ForEach(app.player.hpMax.makeArray()) { integer in
+            if app.player.hp > integer {
+                Text("❤️")
             } else {
-                Text("Items")
+                Text("🖤")
             }
         }
-        .frame(maxWidth: .infinity, maxHeight: 44)
     }
 }
 
-struct MenuItem: View {
-    
-    var title: String
-    
-    var body: some View {
-        ZStack {
-            Rectangle().foregroundColor(.gray)
-            Text(title)
-        }
+extension Int {
+    public func makeArray() -> Range<Int> {
+        return (0..<self)
     }
 }

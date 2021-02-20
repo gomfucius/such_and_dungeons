@@ -10,7 +10,7 @@ import UIKit
 
 struct Variables {
     
-    static private(set) var interval: TimeInterval = 0.5
+    static private(set) var interval: TimeInterval = 0.2
     static let hitThreshold: CGFloat = 50
     
     static func updateInterval() {

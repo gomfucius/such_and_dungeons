@@ -81,4 +81,22 @@ class MovableController {
                 self.enemies = enemiesCopy
             }
     }
+    
+    func removeEnemy(_ enemyViewModel: MovableViewModel) {
+        var enemiesCopy = self.enemies
+        if let index = enemiesCopy.firstIndex(of: enemyViewModel) {
+            enemiesCopy.remove(at: index)
+            self.app?.game.removeEnemy(with: enemyViewModel.enemy?.identity.id ?? "7")
+        }
+        self.enemies = enemiesCopy
+    }
+    
+    func removeMinion(_ minionViewModel: MovableViewModel) {
+        var minionsCopy = self.minions
+        if let index = minionsCopy.firstIndex(of: minionViewModel) {
+            minionsCopy.remove(at: index)
+            self.app?.game.removeMinion(with: minionViewModel.minion?.identity.id ?? "7")
+        }
+        self.minions = minionsCopy
+    }
 }

@@ -25,5 +25,6 @@ struct LevelView: View {
                 }
             }
         }
+        .clipped()
     }
 }
