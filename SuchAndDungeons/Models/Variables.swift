@@ -30,9 +30,7 @@ struct Identity {
 }
 
 class Minion: SuchUnit, Identifiable, Hashable, NSCopying {
-    
-    var identity = Identity(id: "\(Int.random(in: 0...Int.max))")
-    
+        
     static func == (lhs: Minion, rhs: Minion) -> Bool {
         return lhs.id == rhs.id
     }
@@ -48,9 +46,7 @@ class Minion: SuchUnit, Identifiable, Hashable, NSCopying {
 }
 
 class Enemy: SuchUnit, Identifiable, Hashable, NSCopying {
-    
-    var identity = Identity(id: "\(Int.random(in: 0...Int.max))")
-    
+        
     static func == (lhs: Enemy, rhs: Enemy) -> Bool {
         return lhs.id == rhs.id
     }

@@ -6,9 +6,14 @@
 //
 
 import UIKit
+import SwiftUI
 
-class SuchUnit {
+class SuchUnit: ObservableObject {
     
+    @Published var hpPercent: Double = 1
+    @Published var isHealthBarHidden: Bool = true
+    let identity = Identity(id: "\(Int.random(in: 0...Int.max))")
+
     private(set) var name: String
     private(set) var image: String
     private(set) var level: Int
@@ -88,6 +93,7 @@ extension SuchUnit {
         if hp < 0 {
             hp = 0
         }
+        hpPercent = Double(Double(hp) / Double(hpMax))
     }
     
 }

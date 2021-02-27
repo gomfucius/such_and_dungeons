@@ -26,8 +26,7 @@ class MovableViewModel: ObservableObject, Equatable {
     var xCancellable: AnyCancellable?
     var yCancellable: AnyCancellable?
     var notificationCancellable: AnyCancellable?
-    var minion: Minion?
-    var enemy: Enemy?
+    var suchUnit: SuchUnit?
     var state: State = .moving
 
     init(direction: Direction) {
@@ -90,25 +89,26 @@ class MovableViewModel: ObservableObject, Equatable {
             }
     }
     
-    func onAppear(minion: Minion) {
-        self.minion = minion
-        doDirection()
-    }
-    
-    func onAppear(enemy: Enemy) {
-        self.enemy = enemy
+    func onAppear(suchUnit: SuchUnit) {
+        self.suchUnit = suchUnit
         doDirection()
     }
     
     func battle(enemyMovableViewModel: MovableViewModel) {
         self.state = .battling
         enemyMovableViewModel.state = .battling
-        guard let monster = minion, let enemy = enemyMovableViewModel.enemy else { return }
+        guard let monster = suchUnit, let enemy = enemyMovableViewModel.suchUnit else { return }
         
         let damageToMe = calculateDamage(attacker: enemy, target: monster)
         monster.damage(damageToMe)
+        monster.isHealthBarHidden = false
         let damageToThem = calculateDamage(attacker: monster, target: enemy)
         enemy.damage(damageToThem)
+        enemy.isHealthBarHidden = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            monster.isHealthBarHidden = true
+            enemy.isHealthBarHidden = true
+        }
     }
     
     // MARK: - Private
@@ -124,10 +124,10 @@ class MovableViewModel: ObservableObject, Equatable {
     private func doDirection() {
         switch direction {
         case .left:
-            offset = CGPoint(x: 200, y: 0)
+            offset = CGPoint(x: Variables.offscreenEdge, y: 0)
             app?.moveable.enemies.append(self)
         case .right:
-            offset = CGPoint(x: -200, y: 0)
+            offset = CGPoint(x: -Variables.offscreenEdge, y: 0)
             app?.moveable.minions.append(self)
         }
     }
@@ -135,10 +135,10 @@ class MovableViewModel: ObservableObject, Equatable {
     // MARK: - Equatable
     
     static func == (lhs: MovableViewModel, rhs: MovableViewModel) -> Bool {
-        if lhs.minion != nil {
-            return lhs.minion?.identity.id == rhs.minion?.identity.id
+        if lhs.suchUnit != nil {
+            return lhs.suchUnit?.identity.id == rhs.suchUnit?.identity.id
         } else {
-            return lhs.enemy?.identity.id == rhs.enemy?.identity.id
+            return lhs.suchUnit?.identity.id == rhs.suchUnit?.identity.id
         }
     }
 }

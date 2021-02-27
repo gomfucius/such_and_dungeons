@@ -52,18 +52,18 @@ class MovableController {
                         // If minion is close enough, go into battle
                         if minion.offset.x + Variables.hitThreshold > enemy.offset.x {
                             minion.battle(enemyMovableViewModel: enemy)
-                            if minion.minion?.isDead == true {
+                            if minion.suchUnit?.isDead == true {
                                 if let index = minionsCopy.firstIndex(of: minion) {
                                     minionsCopy.remove(at: index)
-                                    self.app?.game.removeMinion(with: minion.minion?.identity.id ?? "7")
+                                    self.app?.game.removeMinion(with: minion.suchUnit?.identity.id ?? "7")
                                 }
                             }
                             
-                            if enemy.enemy?.isDead == true {
+                            if enemy.suchUnit?.isDead == true {
                                 if let index = enemiesCopy.firstIndex(of: enemy) {
                                     enemiesCopy.remove(at: index)
-                                    self.app?.game.removeEnemy(with: enemy.enemy?.identity.id ?? "7")
-                                    self.app?.player.addGold(enemy.enemy?.gold ?? 0)
+                                    self.app?.game.removeEnemy(with: enemy.suchUnit?.identity.id ?? "7")
+                                    self.app?.player.addGold(enemy.suchUnit?.gold ?? 0)
                                 }
                             }
                             // Exits for loop on enemies and go to next minion
@@ -87,7 +87,7 @@ class MovableController {
         var enemiesCopy = self.enemies
         if let index = enemiesCopy.firstIndex(of: enemyViewModel) {
             enemiesCopy.remove(at: index)
-            self.app?.game.removeEnemy(with: enemyViewModel.enemy?.identity.id ?? "7")
+            self.app?.game.removeEnemy(with: enemyViewModel.suchUnit?.identity.id ?? "7")
         }
         self.enemies = enemiesCopy
     }
@@ -96,7 +96,7 @@ class MovableController {
         var minionsCopy = self.minions
         if let index = minionsCopy.firstIndex(of: minionViewModel) {
             minionsCopy.remove(at: index)
-            self.app?.game.removeMinion(with: minionViewModel.minion?.identity.id ?? "7")
+            self.app?.game.removeMinion(with: minionViewModel.suchUnit?.identity.id ?? "7")
         }
         self.minions = minionsCopy
     }

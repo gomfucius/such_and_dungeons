@@ -17,13 +17,13 @@ struct MinionView: View {
     
     var body: some View {
         VStack {
-            Image(movableViewModel.minion?.image ?? "enemy_goo")
+            Image(movableViewModel.suchUnit?.image ?? "enemy_goo")
                 .scaleEffect(0.5)
                 .offset(x: movableViewModel.offset.x, y: movableViewModel.offset.y)
                 .animation(.linear)
                 .onAppear {
                     movableViewModel.app = app
-                    movableViewModel.onAppear(minion: minion)
+                    movableViewModel.onAppear(suchUnit: minion)
                 }
         }
     }

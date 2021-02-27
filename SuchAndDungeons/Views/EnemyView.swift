@@ -13,15 +13,53 @@ struct EnemyView: View {
     @EnvironmentObject var app: AppController
     @StateObject var movableViewModel = MovableViewModel(direction: .left)
     var enemy: Enemy
-
+    
     var body: some View {
-        Text("🧙‍♂️")
-            .font(.title)
+        CharacterView(movableViewModel: movableViewModel)
             .offset(x: movableViewModel.offset.x, y: movableViewModel.offset.y)
-            .animation(.linear)
             .onAppear {
                 movableViewModel.app = app
-                movableViewModel.onAppear(enemy: enemy)
+                movableViewModel.onAppear(suchUnit: enemy)
             }
+    }
+}
+
+struct CharacterView: View {
+    
+    @StateObject var movableViewModel: MovableViewModel
+
+    var body: some View {
+        ZStack {
+            Text("🧙‍♂️")
+                .font(.title)
+                .animation(.linear)
+            if movableViewModel.suchUnit?.isHealthBarHidden == false{
+                HealthBar(movableViewModel: movableViewModel)
+                    .animation(.linear)
+            }
+        }
+    }
+}
+
+struct HealthBar: View {
+    
+    @StateObject var movableViewModel: MovableViewModel
+    let width: CGFloat = 40
+    let height: CGFloat = 4
+    let foregroundWidth: CGFloat = 38
+    let yOffset: CGFloat = 20
+
+    var body: some View {
+        ZStack {
+            Rectangle()
+                .foregroundColor(.black)
+                .border(Color.white, width: 1)
+                .frame(width: width, height: height)
+                .offset(x: 0, y: yOffset)
+            Rectangle()
+                .foregroundColor(.green)
+                .frame(width: CGFloat(foregroundWidth * (CGFloat(movableViewModel.suchUnit?.hpPercent ?? 1))), height: height / 2)
+                .offset(x: -(foregroundWidth / 2 - CGFloat(foregroundWidth * (CGFloat(movableViewModel.suchUnit?.hpPercent ?? 1) / 2))), y: yOffset) // Because there's no anchor for frame
+        }
     }
 }
