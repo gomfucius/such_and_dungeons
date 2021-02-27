@@ -32,6 +32,11 @@ class MovableViewModel: ObservableObject, Equatable {
 
     init(direction: Direction) {
         self.direction = direction
+        if direction == .left {
+            offset = CGPoint(x: Variables.offscreenEdge, y: 0)
+        } else {
+            offset = CGPoint(x: -Variables.offscreenEdge, y: 0)
+        }
         
         start()
         notificationCancellable = NotificationCenter.default
@@ -55,7 +60,7 @@ class MovableViewModel: ObservableObject, Equatable {
                 if self.state == .moving {
                     self.offset.x += self.direction == .right ? 10 : -10
                     if self.direction == .left {
-                        if self.offset.x < CGFloat(-200) {
+                        if self.offset.x < CGFloat(-Variables.offscreenEdge) {
                             self.app?.player.addHP(-1)
                             self.xCancellable?.cancel()
                             self.yCancellable?.cancel()
@@ -65,7 +70,7 @@ class MovableViewModel: ObservableObject, Equatable {
                     }
                     
                     if self.direction == .right {
-                        if self.offset.x > CGFloat(200) {
+                        if self.offset.x > CGFloat(Variables.offscreenEdge) {
                             self.xCancellable?.cancel()
                             self.yCancellable?.cancel()
                             self.app?.moveable.removeMinion(self)

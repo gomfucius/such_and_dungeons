@@ -38,7 +38,6 @@ class GameController: ObservableObject {
     func removeEnemy(with id: String) {
         if let index = floors[0]?.enemies.map({ $0.identity.id }).firstIndex(of: id) {
             let enemy = floors[0]?.enemies[index]
-            app?.player.addGold(enemy?.gold ?? 0)
             floors[0]?.enemies.remove(at: index)
             app?.objectWillChange.send()
         }

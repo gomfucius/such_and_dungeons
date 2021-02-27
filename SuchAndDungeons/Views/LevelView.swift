@@ -15,7 +15,7 @@ struct LevelView: View {
     var body: some View {
         ZStack {
             Image("bg_dungeon001")
-                .mask(Rectangle().frame(width: 320, height: 60))
+                .mask(Rectangle().frame(width: Variables.backgroundWidth, height: Variables.backgroundHeight))
             ForEach(Array(app.game.floors), id: \.key) { key, floor in
                 ForEach(floor.minions, id: \.self) { minion in
                     MinionView(minion: minion)

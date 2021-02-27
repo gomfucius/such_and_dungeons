@@ -12,7 +12,10 @@ struct Variables {
     
     static private(set) var interval: TimeInterval = 0.2
     static let hitThreshold: CGFloat = 50
-    
+    static let backgroundWidth: CGFloat = 310
+    static let backgroundHeight: CGFloat = 60
+    static let offscreenEdge: CGFloat = 200
+
     static func updateInterval() {
         Self.interval = Variables.interval == 1 ? 0.5 : 1
         NotificationCenter.default.post(name: Notification.intervalDidChange, object: nil)

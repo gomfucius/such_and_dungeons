@@ -63,6 +63,7 @@ class MovableController {
                                 if let index = enemiesCopy.firstIndex(of: enemy) {
                                     enemiesCopy.remove(at: index)
                                     self.app?.game.removeEnemy(with: enemy.enemy?.identity.id ?? "7")
+                                    self.app?.player.addGold(enemy.enemy?.gold ?? 0)
                                 }
                             }
                             // Exits for loop on enemies and go to next minion
